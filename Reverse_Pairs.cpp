@@ -1,4 +1,5 @@
 //Question : https://leetcode.com/problems/reverse-pairs/description/
+//T.C : O(2n logn)
 
 class Solution {
 public:
