@@ -1,5 +1,5 @@
 //Question : https://leetcode.com/problems/unique-paths/submissions/985934983/
-
+//Solution 1 : T.C = O(m x n)
 class Solution {
 public:
     int uniquePaths(int m, int n) {
@@ -11,5 +11,19 @@ public:
         if(i>=m || j>=n) return 0;
         if(dp[i][j]!=-1) return dp[i][j];
         else return dp[i][j]=getPathCount(i+1,j,m,n,dp)+getPathCount(i,j+1,m,n,dp);
+    }
+};
+
+//Solution 2 : T.C = o(m-1)
+class Solution {
+public:
+    int uniquePaths(int m, int n) {
+       int N=m+n-2;
+       int r=m-1;
+       double res=1;
+       for(int i=1;i<=r;i++){
+           res=res*(N-r+i)/i;
+       }
+       return (int)res;
     }
 };
