@@ -1,4 +1,6 @@
 // Question : https://practice.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1
+// T.C : O(n) or O(n logn)
+//S.C : O(n)
 
 class Solution{
     public:
